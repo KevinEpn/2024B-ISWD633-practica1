@@ -4,7 +4,9 @@ Es un archivo único que contiene todos los programas, librerías, dependencias 
 
 
 ## ¿Cuál es la relación entre una imagen y un contenedor? 
-# COMPLETAR 
+Las imágenes se utilizan para crear contenedores. Una imagen puede ser reutilizada para crear varios contenedores.
+Un contenedor es una instancia en ejecución de una imagen. Funcionando como un entorno aislado donde la aplicación se ejecuta con sus propios recursos, como el sistema de archivos, las variables de entorno y las redes.
+***
 
 ![Imagen y contenedores](img/imagenContenedores.JPG)
 ## Comandos para imágenes
@@ -24,13 +26,14 @@ docker pull <nombre imagen>:<tag>
 ```
 
 Descargar la imagen **hello-world**
-# COMPLETAR
+![image_solu_01](img_solu/image_solu_01.png)
 
-**¿Qué es nginx**
-# COMPLETAR 
+## ¿Qué es nginx?
+Es un servidor web y proxy inverso de alto rendimiento y de código abierto , conocido por su capacidad para manejar grandes cantidades de conexiones simultaneas con un bajo consumo de recursos.
+***
 
 Descargar la imagen  **nginx** en la versión **alpine**
-# COMPLETAR
+![image_solu_02](img_solu/image_solu_02.png)
 
 ### Listar imágenes
 
@@ -39,6 +42,7 @@ docker images
 ```
 
 # COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
+![image_solu_03](img_solu/image_solu_03.png)
 
 **Identificadores**
 
@@ -53,10 +57,14 @@ docker inspect <nombre imagen>:<tag>
 ```
 
 Inspeccionar la imagen hello-world 
-# COMPLETAR
+![image_solu_04](img_solu/image_solu_04.png)
+![image_solu_05](img_solu/image_solu_05.png)
+![image_solu_06](img_solu/image_solu_06.png)
+![image_solu_07](img_solu/image_solu_07.png)
 
-**¿Con qué algoritmo se está generando el ID de la imagen**
-# COMPLETAR
+## ¿Con qué algoritmo se está generando el ID de la imagen
+Con el algoritmo de hash SHA-256
+***
 
 ### Filtrar imágenes
 
@@ -73,7 +81,7 @@ docker rmi <nombre imagen>:<tag>
 ```
 
 Eliminar la imagen hello-world 
-# COMPLETAR
+![image_solu_08](img_solu/image_solu_08.png)
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
 Cuando eliminas una imagen Docker, Docker no elimina automáticamente los contenedores que se han creado a partir de esa imagen. Esto significa que, aunque hayas eliminado la imagen, el contenedor seguirá ejecutándose normalmente.  
